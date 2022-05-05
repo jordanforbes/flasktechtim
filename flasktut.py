@@ -14,7 +14,7 @@ def user(name):
 def backHome():
     return redirect(url_for("home")) #name of method not name of route
 
-@app.route("/admin")
+@app.route("/admin/")
 def admin():
     return redirect(url_for("user",name="Admin"))
 
