@@ -4,6 +4,13 @@
     </head>
     <body>
         <h1>Home Page!</h1>
-        <p>Hello!</p>
+        <p>Hello {{content}}!</p>
+        <p>{{r}}</p>
+        {% for x in range(0,10) %}
+            {% if x % 2 == 1 %}
+                <p>{{x}}</p>
+            {% endif %}
+            <p>Hello</p>
+        {% endfor %}
     </body>
 </html>

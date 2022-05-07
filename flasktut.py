@@ -4,7 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>HELLO</h1> <a href=\'/Shonen Flop\'>Shonen Flop</a>"
+    return "<h1>HELLO</h1> <a href=\'/ShonenFlop\'>Shonen Flop</a>"
+
+@app.route("/ShonenFlop")
+def shonenFlop():
+    return redirect("https://shonenflop.com")
 
 @app.route("/<name>")
 def user(name):
@@ -18,5 +22,5 @@ def backHome():
 def admin():
     return redirect(url_for("user",name="Admin"))
 
-if __name__=="__main__":
+if __name__== '__main__':
     app.run()
